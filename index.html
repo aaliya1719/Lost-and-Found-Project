@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Lost & Found</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <h1>Find your lost property 🧸</h1>
+            <p>Don't panic! We help you find what's missing.</p>
+        </header>
+
+        <div class="search-wrapper">
+            <div class="search-bar">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                <input type="text" id="searchInput" placeholder="Search (e.g., Blue bottle, ID Card)...">
+                
+                <label for="cameraInput" class="camera-btn">
+                    <i class="fa-solid fa-camera"></i>
+                </label>
+                <input type="file" id="cameraInput" accept="image/*" capture="environment" hidden>
+            </div>
+            
+            <div class="search-options">
+                <button class="btn-secondary" onclick="triggerImageSearch()">
+                    <i class="fa-solid fa-image"></i> Search by Image
+                </button>
+            </div>
+        </div>
+
+        <div class="action-buttons">
+            <button class="btn-primary" id="btnFound">
+                <i class="fa-solid fa-plus-circle"></i> I Found Something
+            </button>
+        </div>
+
+        <section class="feed-section">
+            <h2>Recently Found Items</h2>
+            <div class="items-grid" id="itemsGrid">
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1616170919057-5946e5f0c9f6?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Water Bottle">
+                    <div class="card-info">
+                        <h3>Steel Water Bottle</h3>
+                        <p>Found at: Library</p>
+                        <span class="tag">Bottle</span>
+                    </div>
+                </div>
+                <div class="item-card">
+                    <img src="https://images.unsplash.com/photo-1609587415882-97552f39c6c2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8a2V5c3xlbnwwfHwwfHx8MA%3D%3D">
+                        <h3>keys</h3>
+                        <p>Found at: Cafeteria</p>
+                        <span class="tag">Electronics</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="modal" id="uploadModal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h2>Report Found Item</h2>
+            <form id="uploadForm">
+                <div class="upload-area">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                    <p>Click to upload image</p>
+                    <input type="file" id="fileUpload" accept="image/*" required>
+                    <img id="imagePreview" class="preview-img" hidden>
+                </div>
+                <input type="text" id="itemName" placeholder="What is it? (e.g., Keys)" required>
+                <input type="text" id="itemLocation" placeholder="Where did you find it?" required>
+                <button type="submit" class="btn-primary">Post Item</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

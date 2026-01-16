@@ -1,0 +1,223 @@
+:root {
+    --primary: #6C63FF; /* Soft Purple/Blue */
+    --secondary: #F3F4F6;
+    --text-dark: #1F2937;
+    --text-light: #6B7280;
+    --white: #ffffff;
+    --radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f9fafb;
+    color: var(--text-dark);
+}
+
+.app-container {
+    max-width: 600px; /* Mobile app feel */
+    margin: 0 auto;
+    padding: 20px;
+    background: var(--white);
+    min-height: 100vh;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+/* Header */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+header p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+/* Search Bar */
+.search-wrapper {
+    margin-bottom: 25px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: var(--secondary);
+    padding: 10px 15px;
+    border-radius: 50px; /* Pill shape */
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-icon {
+    color: var(--text-light);
+    margin-right: 10px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    flex-grow: 1;
+    outline: none;
+    font-size: 1rem;
+}
+
+.camera-btn {
+    color: var(--primary);
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.search-options {
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+    padding: 12px 20px;
+    border-radius: var(--radius);
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    width: 100%;
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+    font-size: 1rem;
+}
+
+.btn-primary:hover {
+    background: #5a52d5;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+    width: auto;
+    display: inline-flex;
+    font-size: 0.85rem;
+    padding: 8px 16px;
+}
+
+/* Grid Section */
+.items-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.item-card {
+    background: white;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+.item-card:hover {
+    transform: translateY(-3px);
+}
+
+.item-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.card-info {
+    padding: 10px;
+}
+
+.card-info h3 {
+    font-size: 0.9rem;
+    margin-bottom: 4px;
+}
+
+.card-info p {
+    font-size: 0.75rem;
+    color: var(--text-light);
+}
+
+.tag {
+    display: inline-block;
+    background: #E0E7FF;
+    color: var(--primary);
+    font-size: 0.65rem;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-top: 5px;
+}
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    padding: 25px;
+    border-radius: var(--radius);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px; right: 15px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.upload-area {
+    border: 2px dashed #cbd5e1;
+    border-radius: var(--radius);
+    padding: 20px;
+    text-align: center;
+    margin: 15px 0;
+    cursor: pointer;
+}
+
+.upload-area img {
+    max-width: 100%;
+    max-height: 150px;
+    border-radius: var(--radius);
+    margin-top: 10px;
+}
+
+.modal-content input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+}
