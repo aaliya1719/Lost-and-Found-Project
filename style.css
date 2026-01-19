@@ -221,3 +221,55 @@ header p {
     border: 1px solid #e5e7eb;
     border-radius: 8px;
 }
+
+.modal-content textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+}
+
+/* Delete button styling */
+.btn-delete {
+    background-color: #ff4757;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    transition: background-color 0.2s;
+}
+
+.btn-delete:hover {
+    background-color: #ff3838;
+}
+
+/* AI Suggestion styling */
+.ai-suggestion {
+    color: #6C63FF;
+    font-size: 0.85rem;
+    margin-top: 8px;
+    padding: 5px 0;
+    display: block;
+}
+
+/* Item details styling */
+.item-details {
+    color: #666;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    padding: 5px 0;
+    display: block;
+}
+
+/* Time badge */
+.time-badge {
+    font-size: 0.75rem;
+    color: #999;
+    margin-left: 5px;
+}

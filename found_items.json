@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1768837299.10303,
+    "description": "earphone",
+    "location": "cafe",
+    "image": "20260119_211139_1_81484035-2767-4a26-b76f-cbacea416801.jpg",
+    "timestamp": "2026-01-19T21:11:39.103042",
+    "ai_suggestion": "AI suggestion: [Gemini would analyze this item]"
+  },
+  {
+    "id": 1768838102.293849,
+    "description": "Myself",
+    "location": "Cafe",
+    "itemDescription": "Was found having cold coffee",
+    "image": null,
+    "timestamp": "2026-01-19T21:25:02.293859",
+    "ai_suggestion": "AI suggestion: [Gemini would analyze this item]"
+  },
+  {
+    "id": 1768838129.593749,
+    "description": "building",
+    "location": "on street",
+    "itemDescription": "white color",
+    "image": "20260119_212529_image_1.jpg",
+    "timestamp": "2026-01-19T21:25:29.593759",
+    "ai_suggestion": "AI suggestion: [Gemini would analyze this item]"
+  }
+]

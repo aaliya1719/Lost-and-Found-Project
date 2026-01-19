@@ -29,7 +29,7 @@
             
             <div class="search-options">
                 <button class="btn-secondary" onclick="triggerImageSearch()">
-                    <i class="fa-solid fa-image"></i> Search by Image
+                    <i class="fa-solid fa-camera"></i> Capture/Upload Photo
                 </button>
             </div>
         </div>
@@ -43,21 +43,7 @@
         <section class="feed-section">
             <h2>Recently Found Items</h2>
             <div class="items-grid" id="itemsGrid">
-                <div class="item-card">
-                    <img src="https://images.unsplash.com/photo-1616170919057-5946e5f0c9f6?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Water Bottle">
-                    <div class="card-info">
-                        <h3>Steel Water Bottle</h3>
-                        <p>Found at: Library</p>
-                        <span class="tag">Bottle</span>
-                    </div>
-                </div>
-                <div class="item-card">
-                    <img src="https://images.unsplash.com/photo-1609587415882-97552f39c6c2?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8a2V5c3xlbnwwfHwwfHx8MA%3D%3D">
-                        <h3>keys</h3>
-                        <p>Found at: Cafeteria</p>
-                        <span class="tag">Electronics</span>
-                    </div>
-                </div>
+                <!-- Items load from backend -->
             </div>
         </section>
     </div>
@@ -70,11 +56,12 @@
                 <div class="upload-area">
                     <i class="fa-solid fa-cloud-arrow-up"></i>
                     <p>Click to upload image</p>
-                    <input type="file" id="fileUpload" accept="image/*" required>
+                    <input type="file" id="fileUpload" accept="image/*">
                     <img id="imagePreview" class="preview-img" hidden>
                 </div>
-                <input type="text" id="itemName" placeholder="What is it? (e.g., Keys)" required>
+                <input type="text" id="itemName" placeholder="What is it? (e.g., Keys, Blue Bottle)" required>
                 <input type="text" id="itemLocation" placeholder="Where did you find it?" required>
+                <textarea id="itemDescription" placeholder="Brief description (color, material, size, condition, etc.)" rows="3"></textarea>
                 <button type="submit" class="btn-primary">Post Item</button>
             </form>
         </div>
